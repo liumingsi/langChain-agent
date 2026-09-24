@@ -41,7 +41,7 @@ async function refreshCurrentAddress(): Promise<void> {
     const {latitude, longitude} = position.coords;
     const response = await fetch(
       `/nominatim/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}&accept-language=zh-CN`,
-      {headers: {Accept: "application/json"}},
+      { headers: { Accept: "application/json" } },
     );
 
     if (!response.ok) {

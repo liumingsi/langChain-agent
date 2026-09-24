@@ -4,6 +4,7 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {FormEvent, useEffect, useState} from "react";
 import {isAuthenticated, loginUser} from "@/lib/auth";
+import {Bot} from "lucide-react";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -42,11 +43,11 @@ export default function LoginPage() {
         <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-red-100 p-4">
             <div className="w-full max-w-md rounded-3xl border border-white/60 bg-white/80 p-8 shadow-2xl backdrop-blur-xl">
                 <div className="mb-8 text-center">
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 text-2xl font-bold text-white shadow-lg">
-                        厨
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 shadow-lg">
+                        <Bot className="text-white" size={32} />
                     </div>
-                    <h1 className="text-3xl font-bold text-gray-900">欢迎回来</h1>
-                    <p className="mt-2 text-sm text-gray-500">登录后继续使用 AI 私人厨师</p>
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">AI 多功能智能体</h1>
+                    <p className="mt-2 text-sm text-gray-500">登录后继续使用 AI 多功能智能体</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">

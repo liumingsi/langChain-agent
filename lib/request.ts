@@ -1,6 +1,6 @@
 import axios, {AxiosError, AxiosInstance} from "axios";
 
-export const API_BASE = "http://127.0.0.1:8001";
+export const API_BASE = process.env.NEXT_PUBLIC_API_BASE?.replace(/\/$/, "") || "";
 export const AUTH_STORAGE_KEY = "chef_auth_session";
 
 export function getAuthToken(): string | null {
